@@ -1,0 +1,57 @@
+<html>
+    <style>
+        input:valid{
+            border: 1px solid #ccc;
+            background-color:rgb(34, 214, 64);
+        }
+        input:invalid{
+            border: 1px solid #ccc;
+            background-color:rgb(247, 150, 150);
+        }
+    </style>
+
+<body>
+    <form>
+    <table>
+        <thead>
+            <h2>User Authentication Form</h2>    
+        </thead>
+
+        <tr>
+
+            <td>Username :</td>
+            <td>
+                <input name="Name :" type="text" minlength="5" maxlength="30" required/><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Password :</td>
+            <td>
+                <input name="Password :" type="password" /><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile :</td>
+            <td>
+                <input name="Mobile :" type="tel" minlength="10" maxlength="11"/><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Email Id :</td>
+            <td>
+                <input type="email"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth :</td>
+            <td>
+               
+                <input name="Date Of Birth :" type="date" max="2023-12-31" min="1990-01-01" required><br>   
+            </td>
+        </tr>
+</form>
+</table>
+
+
+</body>
+</html>
