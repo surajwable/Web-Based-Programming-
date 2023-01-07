@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>this is my menu</title>
+        <link rel="stylesheet" href="welcome.css">
+
+    </head>
+    <body>
+        <div>
+            <h1>this is my menu</h1>
+            <p>Enter the choice</p>
+            <label id="1" class="india">India :</label>
+            <input type="radio" name="options" id="india">
+            <lebel id="2" class="us">us :</lebel>
+            <input type="radio" name="options" id="us">
+            <lebel id="3" class="japan">japan :</lebel>
+            <input type="radio" name="options" id="japan">
+            <button type="submit" name="choice">Enter choice</button>
+        </div>
+<script>
+function welcome()
+{
+    var choice=0
+    console.log("Welcome to my app");
+    function indianwelcome()
+    {
+        console.log("namaste")
+    }
+
+    function USwelcome()
+    {
+        console.log("Howd")
+    }
+
+    function japanesewelcome()
+    {
+        console.log("konnichiwa")
+    }
+
+    do{
+        console.log("********Menu*********")
+        console.log("1.India\n2.us\n3.japan\n")
+        switch(choice){
+
+            case 1:
+                return indianwelcome();
+                break;
+            case 2:
+
+                return USwelcome();
+                break;
+            
+            case 3:
+               return japanesewelcome();
+                break;
+           
+            default:
+                 console.log("you have entered the wrong choice...!!")
+                break;
+
+        }
+}while(choice!=4);
+}
+welcome();
+
+</script>
+    </body>    
+</html>

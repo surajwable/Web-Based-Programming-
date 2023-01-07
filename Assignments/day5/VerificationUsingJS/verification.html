@@ -1,0 +1,118 @@
+<html>
+    <style>
+        .errormessage
+        {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        //writing validate function for validating date in the form 
+        function validate()
+        {
+            console.log("here")
+            var value = document.forms["form1"]["value"].value
+            var age = document.forms["form1"]["Age"].value
+            console.log(value,age)
+
+            //verification of value
+            if(value.trim()=="")
+            {
+            document.getElementsByClassvalue("errormessage")[0].style.visibility = 'visible'
+            }
+            else
+            document.getElementsByClassvalue("errormessage")[0].style.visibility = 'hidden'
+
+            //verification of value
+            if(uservalue.trim()=="" && )
+            {
+            document.getElementsByClassvalue("errormessage")[0].style.visibility = 'visible'
+            }
+            else
+            document.getElementsByClassvalue("errormessage")[0].style.visibility = 'hidden'
+
+            //verification of email
+            let emailpattern = /[a-zA-Z -_]+@[a-z A-z]+\.[a-z A-Z]{2,3}$/
+            var arr= ['---@aaa.com','pra@gmail.org',
+            'pra_g@hotmail.com','pra@hotmail','pra__gre@ggg.vvv',
+            "test@gov.in"]
+
+            arr.filter((email)=>{
+            return email.match(emailpattern)
+             }).forEach((email)=>{console.log(email)})
+           
+           
+           //verification of age
+            if(age<10){
+                alert("incorrect age") 
+             document.getElementsByClassvalue("errormessage")[1].style.visibility = 'visible'
+                return false;
+            }
+            else
+            {
+                document.getElementsByClassvalue("errormessage")[1].style.visibility = 'hidden'
+                document.forms["form1"].action="one.html"
+                return true;
+            } 
+
+            //verification of 
+
+        }
+        function do2()
+        {
+            document.forms["form1"].action="g.html"
+                document.forms["form1"].submit()
+            
+        }
+    </script>
+    <body>
+        <div>
+        <form value="form1" onsubmit="return validate()">
+            Name :<input type="text" value="value" />
+            <p class="errormessage">value should not be blank and should only have alphabets</p>
+            <br>
+            Username :<input type="text" value="value" />
+            <p class="errormessage">value should not be blank and should have min 4 characters</p>
+            <br>
+            Password :<input type="password" value="Password" />
+            <p class="errormessage">password must be of min 8 characters</p>
+            <br>
+            Re-Enter Password :<input type="password" value="Password" />
+            <p class="errormessage">Re-Enter password must match with password</p>
+            <br>
+            Address :<input type="text" value="Address" />
+            <p class="errormessage">Enter correspondence Address</p>
+            <br>
+            <select name="city" id="city">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Delhi">Delhi</option>
+            <option value="patana">patana</option>
+            <option value="Nagar">Nagar</option>
+            <option value="Sangli">Sangli</option>
+            <option value="Satara">Satara</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Thane">Thane</option>
+            <option value="Ahamednagar">Ahamednagar</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Nandurbar">Nandurbar</option>
+            <option value="Gadchiroli">Gadchiroli</option>
+            <option value="Raigad">Raigad</option>
+            <option value="Ratnagiri">Ratnagiri</option>
+        </select><br>
+        
+        Email :<input type="email" value="Email" />
+        <p class="errormessage">Enter email</p>
+        <br>
+        Phone Number :<input type="tel" value="Phone" />
+        <p class="errormessage">Enter Phone number</p>
+        <br>
+        Age :<input type="text" value="Age" />
+        <p class="errormessage">age must be more than 10</p>
+        <br>
+        <input type="submit" value="submit"> </input><br>
+        </form>      
+    </div>
+    </body>
+</html>
